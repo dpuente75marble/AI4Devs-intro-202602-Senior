@@ -1,28 +1,30 @@
-// Cache DOM elements
-const input = document.getElementById("textInput");
-const button = document.getElementById("reverseBtn");
-const result = document.getElementById("result");
+// ==========================
+// Pure business logic
+// ==========================
 
 /**
- * Unicode-safe reverse
+ * Reverses a string in a Unicode-safe way
  * @param {string} str
  * @returns {string}
  */
 const reverseString = (str) => [...str].reverse().join("");
 
-const handleInput = () => {
-  const value = input.value;
+// ==========================
+// UI Layer
+// ==========================
 
-  // Enable button only if input length > 3
+const input = document.getElementById("textInput");
+const button = document.getElementById("reverseBtn");
+const result = document.getElementById("result");
+
+/**
+ * Updates UI state
+ * @param {string} value
+ */
+const render = (value) => {
   button.disabled = value.length <= 3;
-
-  // Real-time reverse
   result.textContent = reverseString(value);
 };
 
-const handleClick = () => {
-  result.textContent = reverseString(input.value);
-};
-
-input.addEventListener("input", handleInput);
-button.addEventListener("click", handleClick);
+input.addEventListener("input", (e) => render(e.target.value));
+button.addEventListener("click", () => render(input.value));
