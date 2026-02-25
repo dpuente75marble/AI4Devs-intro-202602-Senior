@@ -1,26 +1,38 @@
-const input = document.getElementById("textInput");
-const button = document.getElementById("reverseBtn");
-const result = document.getElementById("result");
+(() => {
+  // Cache DOM elements
+  const input = document.getElementById("textInput");
+  const button = document.getElementById("reverseBtn");
+  const result = document.getElementById("result");
 
-function reverseString(str) {
-  return str.split("").reverse().join("");
-}
+  /**
+   * Safely reverses a string using Unicode-safe spread operator
+   * @param {string} str
+   * @returns {string}
+   */
+  const reverseString = (str) => {
+    return [...str].reverse().join("");
+  };
 
-// Mostrar botón solo si hay más de 3 caracteres
-input.addEventListener("input", () => {
-  const value = input.value;
+  /**
+   * Handles input changes
+   */
+  const handleInput = () => {
+    const value = input.value;
 
-  if (value.length > 3) {
-    button.style.display = "inline";
-  } else {
-    button.style.display = "none";
-  }
+    // Enable button only if input length > 3
+    button.disabled = value.length <= 3;
 
-  // Reverse en tiempo real
-  result.textContent = reverseString(value);
-});
+    // Real-time reverse
+    result.textContent = reverseString(value);
+  };
 
-// Reverse también al pulsar botón
-button.addEventListener("click", () => {
-  result.textContent = reverseString(input.value);
-});
+  /**
+   * Handles button click
+   */
+  const handleClick = () => {
+    result.textContent = reverseString(input.value);
+  };
+
+  input.addEventListener("input", handleInput);
+  button.addEventListener("click", handleClick);
+})();
