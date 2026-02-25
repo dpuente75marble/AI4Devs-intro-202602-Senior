@@ -1,14 +1,17 @@
-Act as a senior frontend engineer.
+Act as a senior frontend engineer (2026 best practices).
 
-Create a minimal HTML + JavaScript solution that reverses a string.
+Refactor the previous solution into a modern, clean implementation using ES Modules.
 
 Requirements:
 
-- Separate HTML and JS files
-- No inline styles
-- Unicode-safe reverse implementation
-- Show button only when input length > 3
-- Real-time reverse
-- Avoid global scope pollution
-- Clean and readable code
-- Brief comments explaining logic
+- Use <script type="module">.
+- Do not use IIFE (module scope should handle encapsulation).
+- Separate HTML and JS files.
+- No inline styles.
+- Use a Unicode-safe reverse implementation.
+- Enable the button only when input length > 3 (do not hide it).
+- Reverse the string in real time while typing.
+- Avoid global scope pollution.
+- Use clean, readable, maintainable code.
+- Add brief, meaningful comments explaining key decisions.
+- Follow modern JavaScript standards (ES2022+).
