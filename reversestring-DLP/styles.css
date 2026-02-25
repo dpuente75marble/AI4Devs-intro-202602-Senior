@@ -1,0 +1,76 @@
+:root {
+  --bg1: #c7a1ff;
+  --bg2: #8dd7ff;
+  --bg3: #ffd1dc;
+  --card: rgba(255, 255, 255, 0.22);
+  --border: rgba(255, 255, 255, 0.35);
+  --shadow: 0 22px 70px rgba(10, 10, 30, 0.22);
+}
+
+body {
+  background:
+    radial-gradient(
+      900px 600px at 20% 10%,
+      rgba(199, 161, 255, 0.75),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at 80% 20%,
+      rgba(141, 215, 255, 0.55),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 650px at 50% 90%,
+      rgba(255, 209, 220, 0.55),
+      transparent 60%
+    ),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
+}
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.result-box {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.illustration {
+  border-radius: 26px;
+  background: rgba(10, 10, 30, 0.68);
+  box-shadow: var(--shadow);
+  color: white;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+}
+
+.illustration-inner {
+  text-align: left;
+  max-width: 360px;
+}
+
+.icon-bubble {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 14px;
+}
+
+.icon-bubble i {
+  font-size: 28px;
+}

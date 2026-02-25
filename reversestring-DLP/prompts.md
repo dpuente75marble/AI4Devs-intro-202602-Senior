@@ -1,31 +1,23 @@
-Act as a senior frontend engineer designing production-ready code (2026 standards).
+Act as a senior frontend engineer and UX/UI designer (2026 standards).
 
-Refactor the reverse string solution following clean architecture and maintainability principles, keeping it runnable by opening index.html directly (file://) without requiring a local server.
+Improve the existing reverse string solution visually while respecting the original exercise requirements.
 
-Requirements:
+Constraints:
 
-Architecture:
+- Keep HTML and JS separated.
+- Maintain Unicode-safe reverse implementation.
+- Keep real-time reverse behavior.
+- Show the button only when input length > 3.
+- Ensure it works by opening index.html directly (file://), without requiring a local server.
 
-- Keep HTML and JS in separate files.
-- Avoid polluting the global scope as much as possible for a small vanilla JS exercise.
-- Separate concerns (DOM handling vs business logic).
-- Make the reverse function pure and easily testable.
-- Keep the solution minimal, readable, and maintainable.
+UI/UX requirements:
 
-Implementation:
-
-- Unicode-safe reverse implementation.
-- Reverse the string in real time while typing.
-- Enable the button only when input length > 3 (do not hide it).
-- No inline styles.
-- Clean semantic HTML.
-- Minimal DOM queries (cache elements).
-- Use modern ES2022+ syntax.
-- Add concise, meaningful comments.
-
-Code quality:
-
-- Defensive programming.
-- Readable naming.
+- Use Bootstrap via CDN.
+- Create a modern glassmorphism-inspired layout.
+- Make the design responsive.
+- Use semantic HTML.
+- Add subtle UX improvements (character counter, status badge, clear button).
+- Keep the interface clean, readable, and professional.
 - Avoid unnecessary complexity.
-- Follow current frontend best practices (2026).
+
+Follow current frontend best practices (2026).
